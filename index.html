@@ -120,6 +120,7 @@
   textarea { min-height: 80px; resize: vertical; }
   fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 8px; min-width: 0; }
   .choices { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  @media (max-width: 480px) { .choices { grid-template-columns: 1fr; } }
   .choice { position: relative; }
   .choice input { position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
   .choice span { display: block; text-align: center; padding: 11px 8px; border: 1px solid var(--ink-faint); background: var(--paper); font-weight: 400; transition: box-shadow .15s, border-color .15s; }
@@ -243,11 +244,11 @@
             <div class="choices">
               <label class="choice">
                 <input type="radio" name="attending" id="attending-yes" value="yes" checked>
-                <span>Có, tôi sẽ đến <small>Joyfully accepts</small></span>
+                <span>Sẽ đến chung vui <small>Joyfully accepts</small></span>
               </label>
               <label class="choice">
                 <input type="radio" name="attending" id="attending-no" value="no">
-                <span>Rất tiếc, tôi bận <small>Regretfully declines</small></span>
+                <span>Rất tiếc không đến được <small>Regretfully declines</small></span>
               </label>
             </div>
           </fieldset>
